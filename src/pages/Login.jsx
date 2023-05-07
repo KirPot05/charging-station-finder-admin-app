@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/auth";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
@@ -74,11 +74,6 @@ function Login() {
           Login{" "}
         </button>
       </form>
-
-      <h3>
-        Don't have an account?{" "}
-        <button onClick={() => navigate("/register")}> Register </button>{" "}
-      </h3>
     </div>
   );
 }

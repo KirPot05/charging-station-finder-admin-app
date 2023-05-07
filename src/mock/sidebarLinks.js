@@ -22,6 +22,11 @@ export const mainLinks = [
     url: "/vehicles",
     icon: TruckIcon,
   },
+  {
+    title: "Stations",
+    url: "/stations",
+    icon: TruckIcon,
+  },
   //   {
   //     title: "Discover",
   //     url: "/discover",
@@ -50,16 +55,16 @@ export const mainLinks = [
 ];
 
 export const secondaryLinks = [
-  {
-    title: "Book a slot",
-    url: "/bookings/new",
-    icon: PlusCircleIcon,
-  },
-  {
-    title: "Add vehicle",
-    url: "/vehicles/new",
-    icon: PlusCircleIcon,
-  },
+  // {
+  //   title: "Book a slot",
+  //   url: "/bookings/new",
+  //   icon: PlusCircleIcon,
+  // },
+  // {
+  //   title: "Add vehicle",
+  //   url: "/vehicles/new",
+  //   icon: PlusCircleIcon,
+  // },
   //   {
   //     title: "File Manager",
   //     url: "/files",

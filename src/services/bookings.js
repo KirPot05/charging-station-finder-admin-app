@@ -1,16 +1,21 @@
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { updateDoc, serverTimestamp, doc } from "firebase/firestore";
 import { dbInstance } from "../lib/firebase";
+import { ALLOWED_BOOKING_STATUS } from "../config/constants";
 
-export async function bookSlot(data) {
+export async function updateBookingStatus(bookingId, status) {
+  if (bookingId === null || bookingId === undefined)
+    throw new Error("booking id is required");
+
+  if (!ALLOWED_BOOKING_STATUS.includes(status)) {
+    throw new Error("invalid booking-status");
+  }
+
   try {
-    const bookingCollectionRef = collection(dbInstance, "bookings");
-    const bookedSlot = await addDoc(bookingCollectionRef, {
-      ...data,
-      createdAt: serverTimestamp(),
+    const bookingDocRef = doc(dbInstance, "bookings", bookingId);
+    await updateDoc(bookingDocRef, {
+      status,
       updatedAt: serverTimestamp(),
     });
-
-    return bookedSlot.id;
   } catch (error) {
     throw error;
   }

@@ -5,7 +5,6 @@ import { auth } from "./lib/firebase";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Paths from "./Routes";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/global/Navbar";
@@ -45,11 +44,7 @@ function App() {
       </div>
 
       {user === null ? (
-        location.pathname === "/register" ? (
-          <Register />
-        ) : (
-          <Login />
-        )
+        <Login />
       ) : (
         <div className="flex">
           {/* Sidebar with nav links*/}

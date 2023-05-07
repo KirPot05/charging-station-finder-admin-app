@@ -42,14 +42,6 @@ function Sidebar({ link, setLink }) {
         setLink={setLink}
       />
 
-      <NavList
-        heading="Quick Links"
-        links={secondaryLinks}
-        nestedLinks
-        link={link}
-        setLink={setLink}
-      />
-
       {/* Utils section */}
       <h3 className="font-semibold text-gray-400 text-sm my-2"> Options </h3>
       <div>

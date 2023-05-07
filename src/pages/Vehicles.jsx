@@ -64,10 +64,7 @@ function Vehicles() {
   const user = useSelector(selectUser);
   const [vehicles, setVehicles] = useState([]);
   const [value, loading, error] = useCollectionOnce(
-    query(
-      collection(dbInstance, "vehicles"),
-      where("userId", "==", user?.userId)
-    )
+    query(collection(dbInstance, "vehicles"))
   );
 
   useEffect(() => {

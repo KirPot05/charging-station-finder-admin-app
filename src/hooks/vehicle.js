@@ -4,6 +4,9 @@ import { useDocumentDataOnce } from "react-firebase-hooks/firestore";
 import { dbInstance } from "../lib/firebase";
 
 export function useVehicles(vehicleId) {
+  if (vehicleId === null)
+    return [null, false, new Error("Vehicle Id is required")];
+
   const [vehicle, setVehicle] = useState(null);
 
   const [value, loading, error] = useDocumentDataOnce(

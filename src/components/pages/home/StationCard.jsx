@@ -10,16 +10,16 @@ function StationCard({
 }) {
   return (
     <div
-      className={`flex flex-col items-center border px-2 py-4 gap-y-3 ${
+      className={`flex flex-col items-center border p-4 gap-y-3 ${
         !active && "cursor-not-allowed"
       }`}
     >
-      <img src={imgUrl || ""} className="h-20 bg-cover rounded-md" alt="" />
-      <div className="text-sm text-center">
+      <img src={imgUrl || ""} className="h-40 bg-cover rounded-md" alt="" />
+      <div className="text-base text-center font-semibold">
         <p>{name} </p>
-        <p className="text-xs text-gray-700">{location}</p>
+        <p className="text-sm text-gray-700">{location}</p>
       </div>
-      <p className="text-xs text-gray-700">
+      <p className="text-sm text-gray-700">
         {" "}
         Avaialable Slots: {slotsAvailable}{" "}
       </p>

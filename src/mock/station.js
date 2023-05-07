@@ -40,6 +40,26 @@ const stations = [
       "https://img.freepik.com/free-vector/abstract-grunge-style-coming-soon-with-black-splatter_1017-26690.jpg",
     active: false,
   },
+  {
+    name: "Coming Soon",
+    location: "Not yet known",
+    slotsAvailable: 0,
+    slots: [],
+    googleMapLink: "",
+    imgUrl:
+      "https://img.freepik.com/free-vector/abstract-grunge-style-coming-soon-with-black-splatter_1017-26690.jpg",
+    active: false,
+  },
+  {
+    name: "Coming Soon",
+    location: "Not yet known",
+    slotsAvailable: 0,
+    slots: [],
+    googleMapLink: "",
+    imgUrl:
+      "https://img.freepik.com/free-vector/abstract-grunge-style-coming-soon-with-black-splatter_1017-26690.jpg",
+    active: false,
+  },
 ];
 
 export default stations;
