@@ -1,13 +1,13 @@
 import CustomTab from "../components/global/CustomTab";
 import BookingsList from "../components/pages/bookings/BookingsList";
 import { useEffect, useState } from "react";
-import { useCollectionOnce } from "react-firebase-hooks/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, query } from "firebase/firestore";
 import { dbInstance } from "../lib/firebase";
 
 function Bookings() {
   const [bookings, setBookings] = useState([]);
-  const [value, loading, error] = useCollectionOnce(
+  const [value, loading, error] = useCollection(
     query(collection(dbInstance, "bookings"))
   );
 
