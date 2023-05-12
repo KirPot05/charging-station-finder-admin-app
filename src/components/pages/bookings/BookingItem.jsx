@@ -52,7 +52,7 @@ function BookingItem({ id, booking }) {
       <div className="space-y-5 flex-1 text-gray-500 font-semibold">
         <h4 className="text-lg">{booking?.station}</h4>
         <div className="flex justify-between items-center">
-          <span>{booking?.slot}</span>
+          <span>{booking?.timeSlot}</span>
           <span>{booking?.date}</span>
           <span>Ather 450X</span>
 

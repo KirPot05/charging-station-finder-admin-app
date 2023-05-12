@@ -2,7 +2,7 @@ const stations = [
   {
     name: "HP Electrical Services",
     location: "Tilakwadi",
-    slotsAvailable: 20,
+    slotsAvailable: 10,
     slots: ["10AM-11AM", "11AM-12PM"],
     googleMapLink: "https://goo.gl/maps/Zs14WGrE9QamtuF48",
     imgUrl:
